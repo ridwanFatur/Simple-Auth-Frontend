@@ -17,11 +17,12 @@ A modern React TypeScript application with Tailwind CSS, connecting to the [Simp
 ## Demo
 
 
-Uploading Simple 2FA Authenticator Method.mp4…
+
+https://github.com/user-attachments/assets/b5d14ef0-2019-4de7-b053-e6657401ce5a
 
 
 
-Uploading Mobile Responsive.mp4…
+https://github.com/user-attachments/assets/29e9af34-d47e-4695-88c8-7e4a6743df0d
 
 
 
@@ -61,13 +62,3 @@ npm run dev
 # or with yarn
 yarn dev
 ```
-
-## Configuration
-
-### Environment Variables
-
-| Variable | Description | Default |
-|----------|-------------|---------|
-| VITE_API_URL | URL of the backend API | http://localhost:8000 |
-| VITE_FRONTEND_URL | URL of the frontend application | http://localhost:5173 |
-| VITE_GOOGLE_CLIENT_ID | Google OAuth Client ID | - |
