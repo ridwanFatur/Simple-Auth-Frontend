@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# Simple Auth Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React TypeScript application with Tailwind CSS, connecting to the [Simple-Auth-Backend](https://github.com/ridwanFatur/Simple-Auth-Backend). This frontend provides a seamless user authentication experience with JWT tokens, Google OAuth, and two-factor authentication.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 JWT token-based authentication
+- 🔄 Token refresh handling
+- 🌐 Google OAuth integration
+- 📱 Two-factor authentication (2FA)
+- 📧 Email verification flow
+- 🎨 Modern UI with Tailwind CSS
+- 📱 Fully responsive design (mobile, tablet, and desktop)
+- ⚡ Built with Vite for fast development
+- 📝 TypeScript for type safety
 
-## Expanding the ESLint configuration
+## Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+https://github.com/user-attachments/assets/b5d14ef0-2019-4de7-b053-e6657401ce5a
+
+
+
+https://github.com/user-attachments/assets/29e9af34-d47e-4695-88c8-7e4a6743df0d
+
+
+
+## Prerequisites
+
+- [Simple-Auth-Backend](https://github.com/ridwanFatur/Simple-Auth-Backend) set up and running
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/ridwanFatur/Simple-Auth-Frontend.git
+cd Simple-Auth-Frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm install
+# or with yarn
+yarn
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+3. Create a `.env` file in the project root:
+
+```
+VITE_API_URL=http://localhost:8000
+VITE_FRONTEND_URL=http://localhost:5173
+VITE_GOOGLE_CLIENT_ID=your_google_client_id
+```
+
+4. Start the development server:
+
+```bash
+npm run dev
+# or with yarn
+yarn dev
 ```
