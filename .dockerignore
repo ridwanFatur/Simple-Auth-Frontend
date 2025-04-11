@@ -1,0 +1,53 @@
+# Node modules (excluded since we install them in the container)
+node_modules
+
+# Build output (excluded since we build in the container)
+dist
+dist-ssr
+build
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Editor and IDE files
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# OS and temporary files
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+
+# Testing and coverage
+coverage
+*.lcov
+
+# Linting and formatting configs (optional, include if not needed in build)
+.eslintcache
+
+# Docker-related files
+Dockerfile
+.dockerignore
+docker-compose.yml
+docker-compose.yaml
+
+# Git
+.git
+.gitignore
+
+# Miscellaneous
+*.md
+LICENSE
