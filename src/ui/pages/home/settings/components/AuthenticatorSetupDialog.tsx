@@ -20,6 +20,18 @@ export default function AuthenticatorSetupDialog({
   const [verificationCode, setVerificationCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
+  const [isReady, setIsReady] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsReady(false);
+      const timer = setTimeout(() => {
+        setIsReady(true);
+      }, 100);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     if (isOpen) {
@@ -68,12 +80,18 @@ export default function AuthenticatorSetupDialog({
         <div className="flex flex-col items-center space-y-4">
           <div className="border border-gray-200 p-2 rounded-md bg-white">
             {authenticatorParam && (
-              <QRCode
-                value={authenticatorParam.qrCodeUrl}
-                size={192}
-                level="H"
-                className="m-2"
-              />
+              <>
+                {isReady ? (
+                  <QRCode
+                    value={authenticatorParam.qrCodeUrl}
+                    size={192}
+                    level="H"
+                    className="m-2"
+                  />
+                ) : (
+                  <div className="m-2 w-48 h-48" />
+                )}
+              </>
             )}
           </div>
 
